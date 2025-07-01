@@ -1,3 +1,17 @@
+# Takwene Music - تكوين ميوزك
+
+A modern music platform showcasing Arab artists and their music.
+
+## 🎵 Features
+- Artist profiles and albums
+- Modern responsive design
+- Arabic and English support
+
+## 🚀 Live Website
+Visit: https://molikebo.github.io/takwene-music
+
+<!-- Deployment trigger -->
+
 # Players Club: A Free Astro Template for Showcasing Music Artists
 
 Players Club is a free Astro template for showcasing music artists—an experimental proof of concept built in collaboration with [Alex Tkachev](https://alextkachev.com/).
