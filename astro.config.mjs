@@ -5,7 +5,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://your-site-name.netlify.app', // Update this with your actual domain later
+  site: 'https://molikebo.github.io',
+  base: '/takwene-music',
   integrations: [
     tailwindcss(),
     react()
