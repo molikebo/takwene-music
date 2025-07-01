@@ -1,0 +1,121 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Takwene Music - Home">
+  <main class="home-page">
+    <section class="hero-section">
+      <h1 class="site-title">مرحباً بك في تاكواني ميوزك</h1>
+      <p class="tagline">منصة لاكتشاف وتكريم الأصوات الموسيقية الفريدة.</p>
+      <img src="/images/takwene-hero.webp" alt="Takwene Music Hero Image" class="hero-image" />
+      <div class="cta-buttons">
+        <a href="/artists" class="button primary">اكتشف فنانيننا</a>
+        <a href="/releases" class="button secondary">استمع إلى إصداراتنا</a>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <h2>إصدارات مميزة</h2>
+      <div class="featured-releases-grid">
+        <div class="release-card">
+            <img src="/images/albums/veto-breaking-chains.webp" alt="Breaking Chains Cover" />
+            <h3>Breaking Chains - Veto</h3>
+        </div>
+        <div class="release-card">
+            <img src="/images/albums/mc-mego-single-vibe.webp" alt="Street Vibe Cover" />
+            <h3>Street Vibe - MC Mego</h3>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+  <style>
+    .home-page {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .hero-section {
+      margin-bottom: 60px;
+    }
+    .site-title {
+      font-size: 3em;
+      color: var(--color-text); /* استخدم متغيرات الألوان من global.css */
+      margin-bottom: 10px;
+    }
+    .tagline {
+      font-size: 1.2em;
+      color: var(--color-text-secondary);
+      margin-bottom: 30px;
+    }
+    .hero-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .button {
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .button.primary {
+      background-color: var(--color-accent); /* مثال للون مميز */
+      color: var(--color-bg);
+    }
+    .button.primary:hover {
+      background-color: var(--color-accent-dark);
+    }
+    .button.secondary {
+      background-color: transparent;
+      border: 2px solid var(--color-text);
+      color: var(--color-text);
+    }
+    .button.secondary:hover {
+      background-color: var(--color-text);
+      color: var(--color-bg);
+    }
+    .featured-section {
+        background-color: var(--color-bg-alt); /* لون خلفية مختلف للقسم */
+        padding: 40px 20px;
+        border-radius: 8px;
+    }
+    .featured-section h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+        color: var(--color-text);
+    }
+    .featured-releases-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        justify-content: center;
+    }
+    .release-card {
+        background-color: var(--color-bg);
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding-bottom: 15px;
+    }
+    .release-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 1px solid var(--color-border);
+    }
+    .release-card h3 {
+        font-size: 1.1em;
+        margin-top: 15px;
+        color: var(--color-text);
+    }
+  </style>
+</BaseLayout>

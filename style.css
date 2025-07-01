@@ -1,0 +1,270 @@
+/* --- Neubrutalist Design --- */
+
+/* 1. Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+/* 2. Global Styles & Variables */
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #111;
+    --primary-color: #ff5722;
+    --border-color: #111;
+    --card-background: #fff;
+    --shadow-color: #111;
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #f0f0f0;
+    --border-color: #f0f0f0;
+    --card-background: #1e1e1e;
+    --shadow-color: #f0f0f0;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    direction: rtl;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 3. Header and Navigation */
+header {
+    background-color: var(--card-background);
+    padding: 1rem 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+nav a:hover {
+    border-color: var(--primary-color);
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* 4. Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* 5. Card Styles */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 5px 5px 0px var(--shadow-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0px var(--primary-color);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 2px solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--shadow-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 6px 6px 0px var(--shadow-color);
+}
+
+/* 6. Artist & Article Details */
+.artist-details, .article-full {
+    background-color: var(--card-background);
+    padding: 3rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 5px 5px 0px var(--shadow-color);
+}
+
+.artist-image {
+    max-width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 2rem;
+    border: 2px solid var(--border-color);
+}
+
+.article-image-full {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 2px solid var(--border-color);
+}
+
+.artist-details h2, .article-full h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.artist-details h3 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+}
+
+.artist-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.artist-details ul li {
+    margin-top: 1rem;
+}
+
+.artist-details ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* 7. Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* 8. Home Page */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-header nav {
+    background: transparent;
+    border: none;
+}
+
+.home-header .logo a, .home-header nav a {
+    color: #fff;
+}
+
+.home-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.home-main h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.home-main p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.large-button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
